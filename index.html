@@ -39,26 +39,10 @@
 
     <script type="text/javascript">
         function callApi() {
-            fetch('https://cucollaborate-api.azure-api.net/test', {
-                method: 'GET',
-                headers: {
-                    'Ocp-Apim-Subscription-Key': '04c337d196a64d859bd64f49ed74ac32',
-                }
-            })
-                .then(
-                    response => {
-                        if (response.status !== 200) {
-                            console.log('Looks like there was a problem. Status Code: ' +
-                                response.status);
-                            return;
-                        }
-
-                        // Examine the text in the response
-                        response.json().then(function (data) {
-                            console.log(data);
-                        });
-                    })
-                .catch(err => console.log('Fetch Error :-S', err));
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", "https://cucollaborate-api.azure-api.net/test", false );
+            xmlHttp.setRequestHeader("Ocp-Apim-Subscription-Key", "04c337d196a64d859bd64f49ed74ac32");
+            xmlHttp.send(null);
         }
     </script>
 </body>
