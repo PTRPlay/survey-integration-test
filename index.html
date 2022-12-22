@@ -1,50 +1,20 @@
 <!doctype html>
-
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>A Basic HTML5 Template</title>
-    <meta name="description" content="A simple HTML5 Template for new projects.">
-    <meta name="author" content="SitePoint">
-
-    <meta property="og:title" content="A Basic HTML5 Template">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
-    <meta property="og:description" content="A simple HTML5 Template for new projects.">
-    <meta property="og:image" content="image.png">
-
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="https://www.creditunionmatch.com/bundle.css" />
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc1-D1_H3JvVk9YOb1URcl8Ivgyx_jQSI&amp;libraries=places"></script>
+    <title>This is the title of the webpage!</title>
 </head>
-
 <body>
-    <h1>This is Awesome Credit Union</h1>
-    <h5>Best loans ever!!!</h5>
-    <p><b>Apply now and get your best rate!!!</b></p>
-    <button onclick="callApi()">Click here</button>
-    <div id="cumatch-app" class="container-fluid" joincu-subscription-key="f6c10955dbd74a5abba694a3f1514a47"
-        credit-union-identifier="ame-church" header-visible="false"></div>
 
-        <script src="https://www.creditunionmatch.com/runtimeConfig.js"></script>
-        <script src="https://www.creditunionmatch.com/bundle.js"></script>
-       
-
-
-    <script type="text/javascript">
-        function callApi() {
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "GET", "https://cucollaborate-api.azure-api.net/test?subscription-key=f6c10955dbd74a5abba694a3f1514a47", false );
-            //xmlHttp.setRequestHeader("Ocp-Apim-Subscription-Key", "f6c10955dbd74a5abba694a3f1514a47");
-            xmlHttp.send(null);
-        }
+    <script>
+        function test(){
+            var testWindow = window.open('https://www.w3schools.com/html/html_forms.asp', 'testWindow')
+            debugger
+            testWindow.document.getElementById('fname').value = "john";
+            testWindow.document.getElementById('lname').value = "deer";  
+        }      
     </script>
-</body>
 
+    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <button onclick="test()">Test</button>
+</body>
 </html>
